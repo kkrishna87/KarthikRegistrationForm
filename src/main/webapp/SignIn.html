@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign In</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	function login(){
+		
+	        var un = document.getElementById("user_name");
+	        var pw = document.getElementById("user_password");
+	        var username = "Scott"; 
+	        var password = "Tiger";
+	        if ((un == username) && (pw == password)) {
+	            return;
+	        }
+	        else {
+	            alert ("Login was unsuccessful, please check your username and password");
+	        }
+	      }
+	
+</script>
+</head>
+<body>
+	<form id="form" method="post">
+		<div class="form-group">
+			<label class="col-md-4 control-label">UserName*</label>
+			<div class="col-md-4 inputGroupContainer">
+				<div class="input-group">
+					<input id="user_name" placeholder="Username" class="form-control"
+						type="text" required>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label">Password*</label>
+			<div class="col-md-4 inputGroupContainer">
+				<div class="input-group">
+					<input id="user_password" placeholder="Password"
+						class="form-control" type="password" required>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-md-4">
+				<button type="button" class="btn" onclick="login()">Submit</button>
+			</div>
+		</div>
+
+	</form>
+</body>
+</html>
